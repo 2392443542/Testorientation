@@ -1,0 +1,18 @@
+PODS:
+  - RTRootNavigationController (1.1.1):
+    - RTRootNavigationController/Core (= 1.1.1)
+  - RTRootNavigationController/Core (1.1.1)
+
+DEPENDENCIES:
+  - RTRootNavigationController (= 1.1.1)
+
+SPEC REPOS:
+  http://hi.hxxbaby.com/mobile/hx-repo-ios.git:
+    - RTRootNavigationController
+
+SPEC CHECKSUMS:
+  RTRootNavigationController: 73357317c9436a0ca10a210fafc1ce82982bb876
+
+PODFILE CHECKSUM: 312ce628b93cc3b1e81ec0251003b5d13c64739c
+
+COCOAPODS: 1.9.1
