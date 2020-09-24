@@ -48,7 +48,7 @@ self.window.rootViewController = [[RTRootNavigationController alloc] initWithRoo
  *  @coclass RTContainerNavigationController
  */
 IB_DESIGNABLE
-@interface RTRootNavigationController : UINavigationController
+@interface RTRootNavigationController : UINavigationController <UINavigationControllerDelegate>
 
 /*!
  *  @brief use system original back bar item or custom back bar item returned by

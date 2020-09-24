@@ -19,32 +19,36 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [AppDelegate switchToLandscape];
+//    [AppDelegate switchToLandscape];
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor purpleColor];
-    TestViewController5 *test5 = [[TestViewController5 alloc] init];
-    test5.view.bounds = self.view.bounds;
+//    TestViewController5 *test5 = [[TestViewController5 alloc] init];
+//    test5.view.bounds = self.view.bounds;
 //    [self addChildViewController:test5];
 //    [self.view addSubview:test5.view];
    
 }
 
-
-
-- (BOOL)shouldAutorotate {
-    return YES;
+- (void)ss {
+//    UIView *fromView = [UIView ];
+//    [UIView transitionFromView:<#(nonnull UIView *)#> toView:<#(nonnull UIView *)#> duration:<#(NSTimeInterval)#> options:<#(UIViewAnimationOptions)#> completion:<#^(BOOL finished)completion#>]
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskLandscape;
-}
-
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return UIInterfaceOrientationLandscapeRight;
-}
+//- (BOOL)shouldAutorotate {
+//    return YES;
+//}
+//
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+//    return UIInterfaceOrientationMaskLandscape;
+//}
+//
+//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+//    return UIInterfaceOrientationLandscapeRight;
+//}
 
 /*
 #pragma mark - Navigation

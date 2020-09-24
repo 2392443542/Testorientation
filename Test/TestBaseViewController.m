@@ -7,15 +7,24 @@
 //
 
 #import "TestBaseViewController.h"
+#import <RTRootNavigationController/RTRootNavigationController.h>
 
-@interface TestBaseViewController ()
+@interface TestBaseViewController ()<RTNavigationItemCustomizable>
 
 @end
 
 @implementation TestBaseViewController
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+//    [AppDelegate switchToLandscape];
+  
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = NSStringFromClass(self.class);
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    NSLog(@"%@",NSStringFromClass(self.class));
     // Do any additional setup after loading the view.
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 250, 150)];
     [button setTitle:NSStringFromClass(self.class) forState:UIControlStateNormal];
@@ -25,6 +34,20 @@
     button.backgroundColor = [UIColor greenColor];
     [button addTarget:self action:@selector(ss) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:button];
+}
+//
+//- (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target action:(SEL)action {
+////    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+//    [backButton setBackgroundColor:[UIColor clearColor]];
+//    [backButton setImage:[UIImage imageNamed:@"navigationBar_back"] forState:UIControlStateNormal];
+//    [backButton setImage:[UIImage imageNamed:@"navigationBar_back"] forState:UIControlStateHighlighted];
+//    [backButton addTarget:self action:@selector(popSelf) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+//    self.navigationItem.leftBarButtonItem = item;
+//    return item;
+//}
+- (void)popSelf {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)ss {

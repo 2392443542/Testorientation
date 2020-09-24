@@ -27,7 +27,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 //    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forBarMetrics:UIBarMetricsDefault];
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forBarMetrics:UIBarMetricsDefault];
 }
 
 
@@ -75,4 +75,16 @@
 //    });
 }
 
+
+- (BOOL)shouldAutorotate {
+    return self.contentViewController.shouldAutorotate;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return self.contentViewController.supportedInterfaceOrientations;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return self.contentViewController.preferredInterfaceOrientationForPresentation;
+}
 @end

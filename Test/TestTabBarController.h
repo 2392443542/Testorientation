@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TestTabBarController : UITabBarController
 
+- (instancetype)initWithRootViewControllers:(NSArray *)controllers
+                                  andTitles:(NSArray *)titles
+                              andImageNames:(NSArray *)imageNames
+                      andImageSelectedNames:(NSArray *)imageSelectedNames;
+
 @end
 
 NS_ASSUME_NONNULL_END

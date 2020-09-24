@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,7 +25,11 @@
 		0477697125134EA40043E745 /* TestTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477697025134EA40043E745 /* TestTabBarController.m */; };
 		3A82ECEA251867F3001A93AE /* TestViewController5.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A82ECE9251867F3001A93AE /* TestViewController5.m */; };
 		3A82ECF62518717E001A93AE /* TestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A82ECF52518717E001A93AE /* TestBaseViewController.m */; };
-		B336AEF53AD091195BD19700 /* Pods_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A11456A6B7AD6ED0B7E5D1F /* Pods_Test.framework */; };
+		3AC2CD6A251A0DBE0012D7DB /* RTestNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2CD69251A0DBE0012D7DB /* RTestNavigationController.m */; };
+		3AC2CD7A251A14D10012D7DB /* PPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2CD79251A14D10012D7DB /* PPNavigationController.m */; };
+		3AC2CD80251A15B90012D7DB /* PPTestTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2CD7F251A15B90012D7DB /* PPTestTabBarController.m */; };
+		3AC2CDFC251AE8880012D7DB /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2CDFB251AE8880012D7DB /* NSObject+Swizzle.m */; };
+		3AC2CE02251AEA900012D7DB /* UIViewController+AutorotationSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2CE00251AEA900012D7DB /* UIViewController+AutorotationSupport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,16 @@
 		3A82ECE9251867F3001A93AE /* TestViewController5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController5.m; sourceTree = "<group>"; };
 		3A82ECF42518717E001A93AE /* TestBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBaseViewController.h; sourceTree = "<group>"; };
 		3A82ECF52518717E001A93AE /* TestBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBaseViewController.m; sourceTree = "<group>"; };
+		3AC2CD68251A0DBE0012D7DB /* RTestNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTestNavigationController.h; sourceTree = "<group>"; };
+		3AC2CD69251A0DBE0012D7DB /* RTestNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTestNavigationController.m; sourceTree = "<group>"; };
+		3AC2CD78251A14D10012D7DB /* PPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNavigationController.h; sourceTree = "<group>"; };
+		3AC2CD79251A14D10012D7DB /* PPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNavigationController.m; sourceTree = "<group>"; };
+		3AC2CD7E251A15B90012D7DB /* PPTestTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPTestTabBarController.h; sourceTree = "<group>"; };
+		3AC2CD7F251A15B90012D7DB /* PPTestTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPTestTabBarController.m; sourceTree = "<group>"; };
+		3AC2CDFA251AE8880012D7DB /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		3AC2CDFB251AE8880012D7DB /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		3AC2CE00251AEA900012D7DB /* UIViewController+AutorotationSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AutorotationSupport.m"; sourceTree = "<group>"; };
+		3AC2CE01251AEA900012D7DB /* UIViewController+AutorotationSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AutorotationSupport.h"; sourceTree = "<group>"; };
 		41823586E77DA26F75E5ECCD /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		F0D1AEE358E190E65A74A507 /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B336AEF53AD091195BD19700 /* Pods_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,16 +153,22 @@
 			children = (
 				044922B62456BAEB0091C0D9 /* AppDelegate.h */,
 				044922B72456BAEB0091C0D9 /* AppDelegate.m */,
+				3AC2CD7E251A15B90012D7DB /* PPTestTabBarController.h */,
+				3AC2CD7F251A15B90012D7DB /* PPTestTabBarController.m */,
 				0477696F25134EA40043E745 /* TestTabBarController.h */,
 				0477697025134EA40043E745 /* TestTabBarController.m */,
 				044922BC2456BAEB0091C0D9 /* ViewController.h */,
 				044922BD2456BAEB0091C0D9 /* ViewController.m */,
 				3A82ECF42518717E001A93AE /* TestBaseViewController.h */,
 				3A82ECF52518717E001A93AE /* TestBaseViewController.m */,
-				0435727F250A307F00A6DA30 /* TestViewController.h */,
-				04357280250A307F00A6DA30 /* TestViewController.m */,
+				3AC2CDFA251AE8880012D7DB /* NSObject+Swizzle.h */,
+				3AC2CDFB251AE8880012D7DB /* NSObject+Swizzle.m */,
+				3AC2CE01251AEA900012D7DB /* UIViewController+AutorotationSupport.h */,
+				3AC2CE00251AEA900012D7DB /* UIViewController+AutorotationSupport.m */,
 				04357291250B1B1B00A6DA30 /* UIImage+Color.h */,
 				04357292250B1B1B00A6DA30 /* UIImage+Color.m */,
+				0435727F250A307F00A6DA30 /* TestViewController.h */,
+				04357280250A307F00A6DA30 /* TestViewController.m */,
 				04357282250A317000A6DA30 /* TestViewController1.h */,
 				04357283250A317000A6DA30 /* TestViewController1.m */,
 				0435728A250A331F00A6DA30 /* TestViewController3.h */,
@@ -160,6 +179,10 @@
 				04357286250A32F600A6DA30 /* TestViewController2.m */,
 				3A82ECE8251867F3001A93AE /* TestViewController5.h */,
 				3A82ECE9251867F3001A93AE /* TestViewController5.m */,
+				3AC2CD68251A0DBE0012D7DB /* RTestNavigationController.h */,
+				3AC2CD69251A0DBE0012D7DB /* RTestNavigationController.m */,
+				3AC2CD78251A14D10012D7DB /* PPNavigationController.h */,
+				3AC2CD79251A14D10012D7DB /* PPNavigationController.m */,
 				0435728E250B19FD00A6DA30 /* TestNavigationController.h */,
 				0435728F250B19FD00A6DA30 /* TestNavigationController.m */,
 				044922BF2456BAEB0091C0D9 /* Main.storyboard */,
@@ -203,7 +226,6 @@
 				41823586E77DA26F75E5ECCD /* Pods-Test.debug.xcconfig */,
 				F0D1AEE358E190E65A74A507 /* Pods-Test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -381,10 +403,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC2CD7A251A14D10012D7DB /* PPNavigationController.m in Sources */,
 				3A82ECF62518717E001A93AE /* TestBaseViewController.m in Sources */,
 				044922BE2456BAEB0091C0D9 /* ViewController.m in Sources */,
+				3AC2CD80251A15B90012D7DB /* PPTestTabBarController.m in Sources */,
 				0435728C250A331F00A6DA30 /* TestViewController4.m in Sources */,
 				0435728D250A331F00A6DA30 /* TestViewController3.m in Sources */,
+				3AC2CD6A251A0DBE0012D7DB /* RTestNavigationController.m in Sources */,
 				0477697125134EA40043E745 /* TestTabBarController.m in Sources */,
 				3A82ECEA251867F3001A93AE /* TestViewController5.m in Sources */,
 				04357287250A32F600A6DA30 /* TestViewController2.m in Sources */,
@@ -394,6 +419,8 @@
 				04357293250B1B1B00A6DA30 /* UIImage+Color.m in Sources */,
 				044922C92456BAEF0091C0D9 /* main.m in Sources */,
 				04357284250A317000A6DA30 /* TestViewController1.m in Sources */,
+				3AC2CDFC251AE8880012D7DB /* NSObject+Swizzle.m in Sources */,
+				3AC2CE02251AEA900012D7DB /* UIViewController+AutorotationSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +591,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VF5FHY3CHS;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,7 +610,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VF5FHY3CHS;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

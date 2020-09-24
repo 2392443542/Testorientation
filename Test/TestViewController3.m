@@ -14,9 +14,13 @@
 
 @implementation TestViewController3
 
+- (void)viewDidDisappear:(BOOL)animated {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor yellowColor];
 }
 
 

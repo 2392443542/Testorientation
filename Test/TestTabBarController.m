@@ -9,16 +9,23 @@
 #import "TestTabBarController.h"
 #import "TestNavigationController.h"
 
-@interface TestTabBarController ()
+@interface TestTabBarController ()<UITabBarControllerDelegate>
 
 @end
 
 @implementation TestTabBarController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self setupSubControllers];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupSubControllers];
+//
 }
 
 + (NSArray<NSArray *> *)getTabBarMenus {
@@ -49,9 +56,9 @@
         if ([childVC isKindOfClass:[UIViewController class]]) {
             UIViewController *page = (UIViewController *)childVC;
 //            page.view.backgroundColor = UIColo
-//            TestNavigationController *navi = [[TestNavigationController alloc] initWithRootViewController:childVC];
+            TestNavigationController *navi = [[TestNavigationController alloc] initWithRootViewController:childVC];
 //            navi.fullScreenPopGestureEnabled = YES;
-            page = page;
+            page = navi;
             page.tabBarItem.title = title;
             page.tabBarItem.tag = idx;
             page.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -67,10 +74,11 @@
             [page.tabBarItem setTitleTextAttributes:selectAtt forState:UIControlStateSelected];
             [page.tabBarItem setTitleTextAttributes:normalAtt forState:UIControlStateNormal];
             [pages addObject:page];
+            [self addChildViewController:navi];
         }
-//        self.
+       
     }];
-    self.viewControllers = pages;
+//    self.viewControllers = pages;
 //    self.delegate = self;
     [self tabBarController:self didSelectViewController:self.viewControllers.firstObject];
 }
@@ -95,6 +103,40 @@
         
     }
 }
+
+- (instancetype)initWithRootViewControllers:(NSArray *)controllers
+                                  andTitles:(NSArray *)titles
+                              andImageNames:(NSArray *)imageNames
+                      andImageSelectedNames:(NSArray *)imageSelectedNames {
+    if (self = [super init]) {
+        for (NSInteger i = 0; i < controllers.count; i++) {
+            [self addChildViewController:controllers[i]
+                               withImage:[UIImage imageNamed:imageNames[i]]
+                           selectedImage:[UIImage imageNamed:imageSelectedNames[i]]
+                              withTittle:titles[i]];
+        }
+    }
+    return self;
+}
+
+- (void)addChildViewController:(UIViewController *)controller
+                     withImage:(UIImage *)image
+                 selectedImage:(UIImage *)selectImage
+                    withTittle:(NSString *)tittle {
+//    LXNavigationController *navigationController = [[LXNavigationController alloc] initWithRootViewController:controller];
+
+    [controller.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColor.redColor, NSForegroundColorAttributeName, nil]
+                                         forState:UIControlStateNormal];
+    [controller.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:UIColor.greenColor, NSForegroundColorAttributeName, nil]
+                                         forState:UIControlStateSelected];
+
+    controller.tabBarItem.title = tittle;
+    controller.tabBarItem.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    controller.tabBarItem.selectedImage = [selectImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
+    [self addChildViewController:controller];
+}
+
 #pragma mark - UIViewControllerRotation
 
 - (BOOL)shouldAutorotate {
